@@ -26,7 +26,7 @@ components:
             required:
                 - xml
             properties:
-                oml:
+                xml:
                     type: string
                     description: The proposed MuJoCo XML scene definition to compile.
                     required: true

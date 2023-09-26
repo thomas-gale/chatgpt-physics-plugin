@@ -1,0 +1,33 @@
+openapi: 3.0.1
+info:
+    title: physics_engine
+    description: Basic physics engine API (using MuJoCo)
+    version: "v1"
+servers:
+    - url: http://localhost:8000 
+paths:
+    /parse_and_compile:
+        post:
+            operationId: parse_and_compile 
+            summary: Given an XML Mujoco, compile for correctness
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/parseAndCompileRequest"
+            responses:
+                "200":
+                    description: OK
+components:
+    schemas:
+        parseAndCompileRequest:
+            type: object
+            required:
+                - xml
+            properties:
+                oml:
+                    type: string
+                    description: The proposed MuJoCo XML scene definition to compile.
+                    required: true
+      

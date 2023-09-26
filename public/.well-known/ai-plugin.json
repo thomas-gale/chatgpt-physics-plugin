@@ -1,0 +1,17 @@
+{
+	"schema_version": "v1",
+	"name_for_human": "Physics Engine",
+	"name_for_model": "physics_engine",
+	"description_for_human": "A plugin that allows ChatGPT to validate concepts which require a grounding in physical/spatial reality.",
+	"description_for_model": "This is a plugin that you to validate concepts which require a grounding in physical/spatial reality. We are providing the MuJoCo (Multi-Joint dynamics with Contact) engine. First search for documentation at https://github.com/google-deepmind/mujoco. We will provide an endpoint that will allow you to parse and compile an mjModel from XML files and assets. We will provide an endpoint that will allow you to advance the simulation by a number of steps. To understand the simulation, you will need to define sensors in your initial simulation definition. The simulation will return the sensor values after you request the simulation to run for a number of steps.",
+	"auth": {
+		"type": "none"
+	},
+	"api": {
+		"type": "openapi",
+		"url": "http://localhost:8000/openapi.yaml"
+	},
+	"logo_url": "http://localhost:8000/logo.png",
+	"contact_email": "mail@thomasjamesgale.com",
+	"legal_info_url": "https://github.com/thomas-gale/chatgpt-physics-plugin/blob/main/LICENSE"
+}

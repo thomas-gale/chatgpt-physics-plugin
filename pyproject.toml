@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=67.8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]  # list of folders that contain the packages (["."] by default)
+
+[project.urls]
+"Homepage" = "https://github.com/thomas-gale/chatgpt-physics-plugin"
+"Bug Tracker" = "https://github.com/thomas-gale/chatgpt-physics-plugin/issues"
+
+[project]
+name = "chatgpt-physics-plugin"
+version = "0.1.0"
+authors = [
+	{ name= "Thomas Gale", email="mail@thomasjamesgale.com" },
+]
+description = "A prototype for a providing a physics engine so that ChatGPT can ground spatial reasoning"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+# Add your essential (platform independent) dependencies here
+dependencies = [
+  "fastapi==0.101.1",
+  "mujoco==2.3.7",
+  "uvicorn[standard]==0.23.2",
+]
